@@ -1,0 +1,86 @@
+# Citation metadata for this software (GitHub repository WANGYuhan2002/yuhan-mfdas,
+# corresponding to yuhan_dasmf_v1.0/ in the Zenodo archive v1.0.0).
+# Licence note: the code is MIT, except functions/pydas_readers/util/block_filters.py
+# (LGPL-3.0, code taken from ObsPy) - see NOTICE.
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper (preferred-citation) and this software."
+title: "yuhan-mfdas"
+abstract: >-
+  Matched-filter (template-matching) earthquake detection and cataloguing
+  pipeline for seafloor Distributed Acoustic Sensing (DAS) strain-rate data
+  accompanying the paper "Persistent Faulting Activity Along the Kefalonia
+  Transform Fault Revealed by Seafloor DAS". This repository corresponds to the
+  yuhan_dasmf_v1.0 folder of the Zenodo archive v1.0.0 (matched_filter_release.zip)
+  with portability and metadata fixes; the data are in the Zenodo archive.
+type: software
+version: 1.0.0
+date-released: "2026-06-16"
+doi: 10.5281/zenodo.20715241
+repository-code: "https://github.com/WANGYuhan2002/yuhan-mfdas"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20715241
+    description: "Zenodo version DOI (v1.0.0)"
+  - type: doi
+    value: 10.5281/zenodo.20715240
+    description: "Zenodo concept DOI (all versions)"
+license: MIT
+keywords:
+  - distributed acoustic sensing
+  - DAS
+  - matched filter
+  - template matching
+  - microseismicity
+  - seafloor
+  - Kefalonia Transform Fault
+authors:
+  - family-names: Wang
+    given-names: Yuhan
+    affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
+  - family-names: Meier
+    given-names: Men-Andrin
+    affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
+  - family-names: Bogris
+    given-names: Adonis
+    affiliation: "Department of Informatics and Computer Engineering, University of West Attica, Athens, Greece"
+  - family-names: Simos
+    given-names: Christos
+    affiliation: "Department of Informatics and Computer Engineering, University of West Attica, Athens, Greece"
+  - family-names: Simos
+    given-names: Iraklis
+    affiliation: "National Observatory of Athens, Institute of Geodynamics, Athens, Greece"
+  - family-names: Melis
+    given-names: Nikolaos S.
+    affiliation: "National Observatory of Athens, Institute of Geodynamics, Athens, Greece"
+  - family-names: Fichtner
+    given-names: Andreas
+    affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
+preferred-citation:
+  type: article
+  status: preprint
+  title: "Persistent Faulting Activity Along the Kefalonia Transform Fault Revealed by Seafloor DAS"
+  year: 2026
+  doi: 10.22541/essoar.15006791/v1
+  url: "https://doi.org/10.22541/essoar.15006791/v1"
+  authors:
+    - family-names: Wang
+      given-names: Yuhan
+      affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
+    - family-names: Meier
+      given-names: Men-Andrin
+      affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
+    - family-names: Bogris
+      given-names: Adonis
+      affiliation: "Department of Informatics and Computer Engineering, University of West Attica, Athens, Greece"
+    - family-names: Simos
+      given-names: Christos
+      affiliation: "Department of Informatics and Computer Engineering, University of West Attica, Athens, Greece"
+    - family-names: Simos
+      given-names: Iraklis
+      affiliation: "National Observatory of Athens, Institute of Geodynamics, Athens, Greece"
+    - family-names: Melis
+      given-names: Nikolaos S.
+      affiliation: "National Observatory of Athens, Institute of Geodynamics, Athens, Greece"
+    - family-names: Fichtner
+      given-names: Andreas
+      affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"

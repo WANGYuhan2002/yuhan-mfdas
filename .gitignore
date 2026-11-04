@@ -1,0 +1,72 @@
+# ---------------------------------------------------------------------------
+# yuhan-mfdas (GitHub version of yuhan_dasmf_v1.0)
+# Raw DAS data, intermediate products and run outputs are never committed; the
+# released data are in the Zenodo archive 10.5281/zenodo.20715241
+# (matched_filter_release.zip, folder yuhan_dasmf_v1.0/).
+# ---------------------------------------------------------------------------
+
+# --- Python caches, builds, environments -----------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# --- OS / editor junk -------------------------------------------------------
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db
+desktop.ini
+*~
+*.swp
+.~lock.*#
+.idea/
+.vscode/
+
+# --- data formats (DAS, seismic, arrays, pickles, NetCDF/GRIB, archives) ----
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.mseed
+*.miniseed
+*.sac
+*.segy
+*.sgy
+*.tdms
+*.nc
+*.grib
+*.zip
+*.tar.gz
+
+# --- input-data folders (filled from the Zenodo archive or external sources) -
+IN_DAS_data/*/
+IN_NOA_cata/*/
+IN_NOA_cata/*.csv
+IN_NOA_cata/*.txt
+IN_STALTA_cata/
+IN_MFFI_data/
+IN_noise_meteo/*.csv
+external/
+
+# --- run outputs -------------------------------------------------------------
+# yuhan-mfdas writes its results into the Output_* and Run_* folders,
+# next to the shipped scripts and documentation
+demo_detection.png
+Output_*/**/*.csv
+Output_*/**/*.png
+Output_*/**/*.json
+Output_*/**/*.txt
+Run_*/**/*.csv
+Run_*/**/*.png
+Run_*/**/*.json

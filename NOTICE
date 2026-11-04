@@ -1,0 +1,87 @@
+NOTICE
+======
+
+yuhan-mfdas — Matched-Filter Earthquake Detection on the Kefalonia Seafloor DAS Cable
+GitHub repository WANGYuhan2002/yuhan-mfdas, corresponding to the yuhan_dasmf_v1.0/
+folder of the Zenodo software archive 10.5281/zenodo.20715241 (v1.0.0).
+
+Copyright (c) 2026 Yuhan Wang. Except where stated below, the code in this
+repository is released under the MIT License (see LICENSE).
+
+This repository also contains third-party code. It is listed below with its
+authors and terms, and is redistributed here for research and for the
+reproducibility of the results in the paper cited in README.md. The original
+author headers are kept unchanged in the source files. This notice does not
+imply that the original authors or their institutions endorse this repository.
+
+
+1. pydas_readers — DAS HDF5 readers/writers, block filtering, cleaning and
+   spectra utilities, channel-mapping helper
+--------------------------------------------------------------------------------
+Author:         Daniel Bowden, ETH Zürich (named in the headers of
+                readers/load_das_h5.py, readers/write_das_h5.py and
+                util/block_filters.py; the other modules of the package carry
+                no author header).
+Path:           functions/pydas_readers/
+Files:          readers/load_das_h5.py, readers/write_das_h5.py,
+                util/block_cleaning.py, util/block_filters.py,
+                util/block_spectra.py, mapping/channel_mapping.py
+Modifications:  An 11-line path bootstrap was prepended to each .py file and
+                empty __init__.py files were added (packaging only).
+                The channel-mapping CSV that mapping/channel_mapping.py refers
+                to belongs to a different DAS deployment and is not included;
+                get_mapping() is not called by any script in this repository.
+Licence:        No licence was supplied with this code. It is redistributed
+                here for research and reproducibility only; permission from
+                the original author is being sought. All rights to this code
+                remain with its author (for the ObsPy-derived parts of
+                util/block_filters.py see section 3).
+
+
+2. load_das_h5_PE2024.py — reader for the downsampled DAS HDF5 files
+--------------------------------------------------------------------------------
+Author:         Pascal Edme, ETH Zürich. Derived from original code by
+                Sara Klaasen and Daniel Bowden; the file header reads
+                "Derived from Sara and Daniel's original code to read Silixa
+                iDASv2 format".
+Path:           functions/load_das_h5_PE2024.py
+Modifications:  The 11-line path bootstrap was prepended and one diagnostic
+                print statement is commented out.
+Licence:        No licence was supplied with this code. It is redistributed
+                here for research and reproducibility only; permission from
+                the original authors is being sought. All rights remain with
+                the authors.
+
+
+3. Code taken from ObsPy — GNU Lesser General Public License v3.0
+--------------------------------------------------------------------------------
+File:           functions/pydas_readers/util/block_filters.py
+The module header states "Chunks of code taken directly from OBSPY", and the
+docstring of block_bandpass() states "Taken directly from OBSPY". The
+corresponding ObsPy source is obspy/signal/filter.py.
+
+ObsPy (https://www.obspy.org)
+    Copyright (C) 2009 Tobias Megies, Moritz Beyreuther, Yannik Behr
+    (header of obspy/signal/filter.py); copyright: The ObsPy Development Team.
+    "ObsPy is licensed under the LGPL v3.0, i.e. it is licensed with the GPL
+    v3.0 and the additional set of permissions granted by the LGPL v3.0
+    license." (LICENSE.txt of the ObsPy 1.4.1 source distribution)
+
+This file is therefore distributed under the GNU Lesser General Public
+License, version 3 (LGPL-3.0), not under the MIT License. The licence texts are
+in LICENSES/LGPL-3.0.txt and LICENSES/GPL-3.0.txt. The remaining code in this
+file is Daniel Bowden's (section 1); whether the file as a whole may be
+labelled LGPL-3.0 is part of the permission request to the original author.
+
+
+4. External / non-redistributed data
+--------------------------------------------------------------------------------
+- NOA reviewed bulletins (IMS1.0 format) read from IN_NOA_cata/ are not
+  included here (link only). Obtain them from the National Observatory of
+  Athens, Institute of Geodynamics (NOA-GEIN, https://www.gein.noa.gr/).
+- Noise and ERA5 meteorological inputs read from IN_noise_meteo/
+  (noise_trends_f8-20Hz_p5.h5, kefa_atmos_data.csv, kefa_wave_data.csv) are not
+  in this repository; they are shipped in the companion repository
+  WANGYuhan2002/yuhan_das_spectra (products/ and meteo/, with ERA5 attribution
+  in its NOTICE) and in the Zenodo archive matched_filter_release.zip
+  (yuhan_dasmf_v1.0/IN_noise_meteo/).

@@ -37,24 +37,6 @@ authors:
   - family-names: Wang
     given-names: Yuhan
     affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
-  - family-names: Meier
-    given-names: Men-Andrin
-    affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
-  - family-names: Bogris
-    given-names: Adonis
-    affiliation: "Department of Informatics and Computer Engineering, University of West Attica, Athens, Greece"
-  - family-names: Simos
-    given-names: Christos
-    affiliation: "Department of Informatics and Computer Engineering, University of West Attica, Athens, Greece"
-  - family-names: Simos
-    given-names: Iraklis
-    affiliation: "National Observatory of Athens, Institute of Geodynamics, Athens, Greece"
-  - family-names: Melis
-    given-names: Nikolaos S.
-    affiliation: "National Observatory of Athens, Institute of Geodynamics, Athens, Greece"
-  - family-names: Fichtner
-    given-names: Andreas
-    affiliation: "Institute of Geophysics, ETH Zürich, Switzerland"
 preferred-citation:
   type: article
   status: preprint

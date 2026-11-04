@@ -149,8 +149,8 @@ Exceptions — see [`NOTICE`](NOTICE):
   GNU LGPL-3.0, not MIT (full texts in [`LICENSES/`](LICENSES/)).
 - `functions/pydas_readers/` (Daniel Bowden, ETH Zürich) and `functions/load_das_h5_PE2024.py`
   (Pascal Edme, ETH Zürich, derived from code by Sara Klaasen and Daniel Bowden) are third-party
-  code without a licence of their own; they are redistributed for research and reproducibility,
-  and permission from the original authors is being sought.
+  code without a licence of their own; they are redistributed here for research and reproducibility
+  with the permission of the original authors.
 
 ### Differences from the Zenodo v1.0.0 archive
 
@@ -291,7 +291,7 @@ MIT，见 [`LICENSE`](LICENSE)。© 2026 Yuhan Wang。
 例外（见 [`NOTICE`](NOTICE)）：
 
 - `functions/pydas_readers/util/block_filters.py` 含有从 ObsPy 拷来的代码，按 GNU LGPL-3.0 发布，不是 MIT（许可证全文见 [`LICENSES/`](LICENSES/)）。
-- `functions/pydas_readers/`（Daniel Bowden，ETH Zürich）和 `functions/load_das_h5_PE2024.py`（Pascal Edme，ETH Zürich，源自 Sara Klaasen 和 Daniel Bowden 的代码）是没有自带许可证的第三方代码，为科研和可复现目的随包再分发，正在征求原作者的许可。
+- `functions/pydas_readers/`（Daniel Bowden，ETH Zürich）和 `functions/load_das_h5_PE2024.py`（Pascal Edme，ETH Zürich，源自 Sara Klaasen 和 Daniel Bowden 的代码）是没有自带许可证的第三方代码，经原作者许可，为科研和可复现目的随包再分发。
 
 ### 与 Zenodo v1.0.0 存档的差别
 

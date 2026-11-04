@@ -32,10 +32,10 @@ Modifications:  An 11-line path bootstrap was prepended to each .py file and
                 to belongs to a different DAS deployment and is not included;
                 get_mapping() is not called by any script in this repository.
 Licence:        No licence was supplied with this code. It is redistributed
-                here for research and reproducibility only; permission from
-                the original author is being sought. All rights to this code
-                remain with its author (for the ObsPy-derived parts of
-                util/block_filters.py see section 3).
+                here for research and reproducibility with the permission of
+                the original author. All rights to this code remain with its
+                author (for the ObsPy-derived parts of util/block_filters.py
+                see section 3).
 
 
 2. load_das_h5_PE2024.py — reader for the downsampled DAS HDF5 files
@@ -48,9 +48,8 @@ Path:           functions/load_das_h5_PE2024.py
 Modifications:  The 11-line path bootstrap was prepended and one diagnostic
                 print statement is commented out.
 Licence:        No licence was supplied with this code. It is redistributed
-                here for research and reproducibility only; permission from
-                the original authors is being sought. All rights remain with
-                the authors.
+                here for research and reproducibility with the permission of
+                the original authors. All rights remain with the authors.
 
 
 3. Code taken from ObsPy — GNU Lesser General Public License v3.0
@@ -70,8 +69,8 @@ ObsPy (https://www.obspy.org)
 This file is therefore distributed under the GNU Lesser General Public
 License, version 3 (LGPL-3.0), not under the MIT License. The licence texts are
 in LICENSES/LGPL-3.0.txt and LICENSES/GPL-3.0.txt. The remaining code in this
-file is Daniel Bowden's (section 1); whether the file as a whole may be
-labelled LGPL-3.0 is part of the permission request to the original author.
+file is Daniel Bowden's (section 1), redistributed with his permission; the
+file as a whole is distributed under the LGPL-3.0.
 
 
 4. External / non-redistributed data

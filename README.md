@@ -1,5 +1,10 @@
 # yuhan-mfdas — Matched-Filter Earthquake Detection on the Kefalonia Seafloor DAS Cable
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20715241.svg)](https://doi.org/10.5281/zenodo.20715241)
+[![Preprint](https://img.shields.io/badge/preprint-ESS%20Open%20Archive-orange)](https://doi.org/10.22541/essoar.15006791/v1)
+[![License](https://img.shields.io/badge/license-MIT%2C%20see%20NOTICE-green)](NOTICE)
+[![Python](https://img.shields.io/badge/python-3.10--3.12-blue)](requirements.txt)
+
 [English](#english) · [中文](#中文)
 
 ## English
@@ -81,6 +86,34 @@ The workflow is numbered sequentially, `Run_N` produces `Output_N`:
 | **Run_4 → Output_4** | De-overlap + classify + estimate magnitudes → **final earthquake catalogue** |
 | **Run_5 → Output_5** | f-k filtering to flag false positives (diagnostic) |
 | **Run_6 → Output_6** | Compare MF vs STA/LTA vs NOA; detection-power figures |
+
+Data flow between the stages (inputs as listed in [`OVERVIEW.md`](OVERVIEW.md)):
+
+```mermaid
+flowchart TD
+    NOA["NOA reviewed bulletins<br/>IN_NOA_cata/"]
+    DAS["Continuous DAS<br/>IN_DAS_data/"]
+    STA["STA/LTA catalogue<br/>IN_STALTA_cata/"]
+    R0["Run_0 · template library"]
+    R1["Run_1 · stacked cross-correlation (SCCs) + MAD"]
+    R2["Run_2 · trigger on SCCs"]
+    R3["Run_3 · peak amplitude per trigger"]
+    R4["Run_4 · de-overlap, classify, magnitudes"]
+    CAT["Output_4 · final MF earthquake catalogue"]
+    R5["Run_5 · f-k false-positive diagnostics"]
+    R6["Run_6 · MF vs STA/LTA vs NOA, detection power"]
+    R0 --> R1 --> R2 --> R3 --> R4 --> CAT
+    CAT --> R5
+    CAT --> R6
+    NOA --> R0
+    NOA --> R4
+    NOA --> R6
+    DAS --> R0
+    DAS --> R1
+    DAS --> R3
+    DAS --> R5
+    STA --> R6
+```
 
 `functions/` is the shared library imported by every stage. Each stage runs with
 `python <script>.py` — scripts locate the project root automatically via the `.dasmf_root`
@@ -247,6 +280,34 @@ python demo.py                    # 几秒钟完成一次模板匹配检测
 | **Run_4 → Output_4** | 去重叠 + 分类 + 震级估计 → **最终地震目录** |
 | **Run_5 → Output_5** | f-k 滤波假阳性诊断图 |
 | **Run_6 → Output_6** | MF、STA/LTA 与 NOA 三目录对比及检测能力图 |
+
+各阶段之间的数据流（输入按 [`说明文档_总览.md`](说明文档_总览.md) 所列）：
+
+```mermaid
+flowchart TD
+    NOA["NOA 人工复核公报<br/>IN_NOA_cata/"]
+    DAS["连续 DAS 数据<br/>IN_DAS_data/"]
+    STA["STA/LTA 目录<br/>IN_STALTA_cata/"]
+    R0["Run_0 · 构建模板库"]
+    R1["Run_1 · 叠加互相关（SCCs）+ MAD"]
+    R2["Run_2 · 在 SCCs 上触发"]
+    R3["Run_3 · 记录触发峰值振幅"]
+    R4["Run_4 · 去重叠、分类、震级估计"]
+    CAT["Output_4 · MF 最终地震目录"]
+    R5["Run_5 · f-k 假阳性诊断"]
+    R6["Run_6 · MF、STA/LTA 与 NOA 对比，检测能力"]
+    R0 --> R1 --> R2 --> R3 --> R4 --> CAT
+    CAT --> R5
+    CAT --> R6
+    NOA --> R0
+    NOA --> R4
+    NOA --> R6
+    DAS --> R0
+    DAS --> R1
+    DAS --> R3
+    DAS --> R5
+    STA --> R6
+```
 
 `functions/` 是各阶段共用的函数库。进入任一阶段直接运行 `python <script>.py` 即可——脚本通过 `.dasmf_root` 哨兵文件自动定位项目根目录，整个文件夹移动到任意位置都无需手改路径。
 
